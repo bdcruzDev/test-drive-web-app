@@ -25,7 +25,7 @@ body {
     font-family: var(--font-main);
     background-color: var(--bg-dark);
     color: var(--text);
-    overflow: hidden;
+    overflow: hidden; /* Body remains fixed, screens scroll */
     height: 100vh;
 }
 
@@ -43,6 +43,12 @@ body {
     flex-direction: column;
     padding: 20px;
     animation: fadeIn 0.3s ease-out;
+    overflow: hidden; /* Protected fixed headers in quiz */
+}
+
+#menu-screen, #results-screen {
+    overflow-y: auto; /* Allow scrolling only here */
+    -webkit-overflow-scrolling: touch;
 }
 
 .screen.active {
@@ -59,9 +65,11 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
+    padding: 40px 0;
+    min-height: min-content; /* Ensure it grows with content */
 }
 
 .logo-container {
@@ -618,9 +626,8 @@ h1 span {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-height: 200px;
-    overflow-y: auto;
-    padding-right: 5px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .history-item {
@@ -653,9 +660,55 @@ h1 span {
     display: none !important;
 }
 
+/* Sound Toggle */
+.sound-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 45px;
+    height: 45px;
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 0 var(--border);
+    transition: all 0.1s;
+}
+
+.sound-toggle:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--border);
+}
+
+.sound-toggle.muted::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    background-color: var(--red);
+    transform: rotate(45deg);
+}
+
+/* Animations */
+.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
 /* Responsive */
 @media (max-width: 480px) {
-    .h1 { font-size: 36px; }
+    h1 { font-size: 36px; }
     .screen { padding: 15px; }
     .feedback-container { flex-direction: column; text-align: center; padding: 20px; }
     .feedback-container .btn { width: 100%; }

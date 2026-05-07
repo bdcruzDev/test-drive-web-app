@@ -8,8 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedOption: null,
         userAnswer: '',
         userBlanks: [],
-        isAnswerChecked: false
+        isAnswerChecked: false,
+        soundEnabled: localStorage.getItem('nicadrive_sound') !== 'false'
     };
+
+    // --- Audio Assets ---
+    const sounds = {
+        correct: new Audio('https://www.myinstants.com/media/sounds/duolingo-correct.mp3'),
+        wrong: new Audio('https://www.myinstants.com/media/sounds/duolingo-wrong.mp3'),
+        click: new Audio('https://www.myinstants.com/media/sounds/ui-click-3.mp3'),
+        win: new Audio('https://www.myinstants.com/media/sounds/final-fantasy-v-music-victory-fanfare.mp3')
+    };
+
+    function playSound(name) {
+        if (currentState.soundEnabled && sounds[name]) {
+            sounds[name].currentTime = 0;
+            sounds[name].play().catch(e => console.log('Audio play failed:', e));
+        }
+    }
 
     // --- DOM Elements ---
     const screens = {
@@ -26,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
         retry: document.getElementById('retry-btn'),
         close: document.getElementById('close-quiz'),
         study: document.getElementById('study-btn'),
-        closeStudy: document.getElementById('close-study')
+        closeStudy: document.getElementById('close-study'),
+        soundToggle: document.getElementById('sound-toggle')
     };
 
     const ui = {
@@ -150,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentState.selectedOption = index;
                 document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
                 btn.classList.add('selected');
+                playSound('click');
                 updateUI();
             };
             grid.appendChild(btn);
@@ -204,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const blankSpan = sentenceDiv.querySelector(`.blank[data-index="${emptyIndex}"]`);
                     blankSpan.textContent = opt;
                     chip.classList.add('used');
+                    playSound('click');
                     updateUI();
                 }
             };
@@ -261,11 +280,18 @@ document.addEventListener('DOMContentLoaded', () => {
             ui.feedbackContainer.className = 'feedback-container correct';
             ui.feedbackTitle.textContent = '¡Excelente!';
             ui.feedbackDesc.textContent = question.explanation;
+            playSound('correct');
         } else {
             currentState.lives--;
             ui.feedbackContainer.className = 'feedback-container wrong';
             ui.feedbackTitle.textContent = 'Incorrecto';
             ui.feedbackDesc.textContent = question.explanation;
+            
+            // Add shake effect
+            ui.questionContainer.classList.add('shake');
+            setTimeout(() => ui.questionContainer.classList.remove('shake'), 500);
+            
+            playSound('wrong');
             
             if (currentState.lives <= 0) {
                 // Game Over logic could go here, but for now we continue to results at the end
@@ -301,6 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
             statusEl.textContent = 'REPROBADO';
             statusEl.className = 'status-failed';
             iconEl.textContent = '❌';
+        }
+        
+        if (accuracy >= 80) {
+            playSound('win');
         }
         
         saveScore(currentState.score, accuracy);
@@ -428,6 +458,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     ui.clearHistoryBtn.onclick = clearHistory;
+
+    // Sound Toggle Logic
+    function updateSoundToggleUI() {
+        if (currentState.soundEnabled) {
+            buttons.soundToggle.textContent = '🔊';
+            buttons.soundToggle.classList.remove('muted');
+        } else {
+            buttons.soundToggle.textContent = '🔈';
+            buttons.soundToggle.classList.add('muted');
+        }
+    }
+
+    buttons.soundToggle.onclick = () => {
+        currentState.soundEnabled = !currentState.soundEnabled;
+        localStorage.setItem('nicadrive_sound', currentState.soundEnabled);
+        updateSoundToggleUI();
+        if (currentState.soundEnabled) playSound('click');
+    };
+
+    // Initial Sound UI state
+    updateSoundToggleUI();
+
+    // Add click sound to main buttons
+    [buttons.start, buttons.study, buttons.next, buttons.retry, buttons.close, buttons.closeStudy].forEach(btn => {
+        const originalOnClick = btn.onclick;
+        btn.onclick = (e) => {
+            playSound('click');
+            if (originalOnClick) originalOnClick(e);
+        };
+    });
 
     // Initial load
     loadHistory();
