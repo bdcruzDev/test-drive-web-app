@@ -50,9 +50,10 @@
                 <div class="progress-container">
                     <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
                 </div>
-                <div class="lives-container">
-                    <span class="life-icon">❤️</span>
-                    <span id="lives-count">3</span>
+                <span id="question-counter" class="question-counter">1 / 10</span>
+                <div id="mistakes-container" class="mistakes-container">
+                    <span class="mistake-icon">❌</span>
+                    <span id="mistakes-count">0</span>
                 </div>
             </header>
 
@@ -69,6 +70,7 @@
                         <div class="feedback-text">
                             <h3 id="feedback-title"></h3>
                             <p id="feedback-desc"></p>
+                            <p id="feedback-source" class="feedback-source"></p>
                         </div>
                     </div>
                     <button id="next-btn" class="btn btn-success">CONTINUAR</button>

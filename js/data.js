@@ -11,7 +11,8 @@ const questionBank = [
             'De 1.1 a 1.5 gramos por litro'
         ],
         answer: 1, // Index of correct option
-        explanation: 'Según la Ley 431, la embriaguez ligera se sitúa entre 0.5 y 1.0 g/l.'
+        explanation: 'Según la Ley 431, la embriaguez ligera se sitúa entre 0.5 y 1.0 g/l.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 2,
@@ -20,7 +21,8 @@ const questionBank = [
         question: '¿Cuántos días de validez tiene la "Boleta Amarilla" para realizar el pago de la multa?',
         placeholder: 'Ej: 15',
         answer: '30',
-        explanation: 'La Boleta Amarilla (Boleta de Infracción) tiene una validez de 30 días.'
+        explanation: 'La Boleta Amarilla (Boleta de Infracción) tiene una validez de 30 días.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 143, Pág. 17' }
     },
     {
         id: 3,
@@ -30,7 +32,8 @@ const questionBank = [
         sentence: 'El arcén es la franja longitudinal contigua a la ________, no destinada a la circulación de ________.',
         blanks: ['calzada', 'vehículos'],
         options: ['calzada', 'vehículos', 'acera', 'peatones', 'motocicletas'],
-        explanation: 'El arcén es el borde de la carretera (calzada) y no es para circulación normal de vehículos.'
+        explanation: 'El arcén es el borde de la carretera (calzada) y no es para circulación normal de vehículos.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 3, Pág. 2' }
     },
     {
         id: 4,
@@ -44,7 +47,8 @@ const questionBank = [
             'No tiene validez para conducir'
         ],
         answer: 2,
-        explanation: 'La Boleta Roja no es válida como documento temporal después de 24 horas.'
+        explanation: 'La Boleta Roja no es válida como documento temporal después de 24 horas.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 129, Pág. 15' }
     },
     {
         id: 5,
@@ -58,7 +62,8 @@ const questionBank = [
             'Cuando se frena bruscamente'
         ],
         answer: 1,
-        explanation: 'Exceder en más de un 30% el límite de velocidad es una de las causales de conducción temeraria.'
+        explanation: 'Exceder en más de un 30% el límite de velocidad es una de las causales de conducción temeraria.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 bis, Pág. 7' }
     },
     {
         id: 6,
@@ -67,7 +72,8 @@ const questionBank = [
         question: 'Menciona un tipo de vehículo de régimen preferente (en singular):',
         placeholder: 'Ej: Ambulancia',
         answer: ['ambulancia', 'bomberos', 'policia', 'patrulla'],
-        explanation: 'Los vehículos de régimen preferente son ambulancias, bomberos y policía en servicio de urgencia.'
+        explanation: 'Los vehículos de régimen preferente son ambulancias, bomberos y policía en servicio de urgencia.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 3, Pág. 3' }
     },
     {
         id: 7,
@@ -81,7 +87,8 @@ const questionBank = [
             'Superior a 3.0 g/l'
         ],
         answer: 2,
-        explanation: 'La embriaguez extrema se define como una concentración superior a 2.0 gramos por litro de sangre.'
+        explanation: 'La embriaguez extrema se define como una concentración superior a 2.0 gramos por litro de sangre.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 8,
@@ -91,7 +98,8 @@ const questionBank = [
         sentence: 'En una rotonda, tiene la preferencia el vehículo que ya está ________ de la misma.',
         blanks: ['dentro'],
         options: ['dentro', 'fuera', 'entrando', 'parado'],
-        explanation: 'Siempre tiene prioridad quien ya circula por el anillo de la rotonda.'
+        explanation: 'Siempre tiene prioridad quien ya circula por el anillo de la rotonda.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 18' }
     },
     {
         id: 9,
@@ -105,7 +113,8 @@ const questionBank = [
             'La conexión wifi en las carreteras'
         ],
         answer: 2,
-        explanation: 'La red vial es todo el conjunto de infraestructuras para la circulación terrestre.'
+        explanation: 'La red vial es todo el conjunto de infraestructuras para la circulación terrestre.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 3, Pág. 3' }
     },
     {
         id: 10,
@@ -119,7 +128,8 @@ const questionBank = [
             'No sucede nada especial'
         ],
         answer: 1,
-        explanation: 'La reincidencia en infracciones graves o peligrosas conlleva la suspensión de la licencia.'
+        explanation: 'La reincidencia en infracciones graves o peligrosas conlleva la suspensión de la licencia.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 24, Pág. 6' }
     },
     {
         id: 11,
@@ -133,7 +143,8 @@ const questionBank = [
             'Velocidad máxima'
         ],
         answer: 1,
-        explanation: 'La señal octagonal roja es universalmente la señal de ALTO.'
+        explanation: 'La señal octagonal roja es universalmente la señal de ALTO.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 7' }
     },
     {
         id: 12,
@@ -147,7 +158,8 @@ const questionBank = [
             'Turísticas'
         ],
         answer: 2,
-        explanation: 'Las señales amarillas son preventivas, advierten sobre peligros o condiciones de la vía.'
+        explanation: 'Las señales amarillas son preventivas, advierten sobre peligros o condiciones de la vía.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 9' }
     },
     {
         id: 13,
@@ -161,7 +173,8 @@ const questionBank = [
             'No es una infracción'
         ],
         answer: 1,
-        explanation: 'Conducir sin licencia se considera una de las infracciones de mayor peligrosidad.'
+        explanation: 'Conducir sin licencia se considera una de las infracciones de mayor peligrosidad.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 6' }
     },
     {
         id: 14,
@@ -170,7 +183,8 @@ const questionBank = [
         question: '¿Cómo se le conoce comúnmente a la Boleta Amarilla?',
         placeholder: 'Ej: Boleta de...',
         answer: ['boleta de infraccion', 'infraccion', 'la amarilla'],
-        explanation: 'Su nombre técnico es Boleta de Infracción, pero todos la conocen como la boleta amarilla.'
+        explanation: 'Su nombre técnico es Boleta de Infracción, pero todos la conocen como la boleta amarilla.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 3, Pág. 2' }
     },
     {
         id: 15,
@@ -180,7 +194,8 @@ const questionBank = [
         sentence: 'Realizar maniobras ________ en la vía pública se considera conducción temeraria.',
         blanks: ['acrobáticas'],
         options: ['acrobáticas', 'lentas', 'seguras', 'normales'],
-        explanation: 'Las maniobras acrobáticas o competencias de velocidad son conducción temeraria.'
+        explanation: 'Las maniobras acrobáticas o competencias de velocidad son conducción temeraria.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 bis, Pág. 7' }
     },
     // --- NUEVAS 50 PREGUNTAS ---
     {
@@ -190,7 +205,8 @@ const questionBank = [
         question: '¿Cuál es el límite de alcohol permitido para conductores de transporte de carga o pasajeros?',
         options: ['0.5 g/l', '1.0 g/l', '0.2 g/l', '0.0 g/l'],
         answer: 2,
-        explanation: 'Para transporte público y de carga, el límite es más estricto: 0.2 g/l.'
+        explanation: 'Para transporte público y de carga, el límite es más estricto: 0.2 g/l.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 ter, Pág. 8' }
     },
     {
         id: 17,
@@ -204,7 +220,8 @@ const questionBank = [
             'Debe ir a juicio inmediatamente'
         ],
         answer: 1,
-        explanation: 'La negativa a la prueba presume legalmente el estado de embriaguez.'
+        explanation: 'La negativa a la prueba presume legalmente el estado de embriaguez.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 ter, Pág. 8' }
     },
     {
         id: 18,
@@ -218,7 +235,8 @@ const questionBank = [
             'Carril exclusivo para buses'
         ],
         answer: 1,
-        explanation: 'Línea amarilla continua significa prohibición de aventajar.'
+        explanation: 'Línea amarilla continua significa prohibición de aventajar.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 8' }
     },
     {
         id: 19,
@@ -227,7 +245,8 @@ const questionBank = [
         question: '¿De qué color son las señales informativas de destinos y distancias?',
         placeholder: 'Ej: Azul',
         answer: ['verde', 'verdes'],
-        explanation: 'Las señales de destino y distancia en carreteras suelen ser verdes.'
+        explanation: 'Las señales de destino y distancia en carreteras suelen ser verdes.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 8' }
     },
     {
         id: 20,
@@ -236,7 +255,8 @@ const questionBank = [
         question: 'Al entrar a una rotonda, ¿hacia qué lado se debe girar siempre?',
         options: ['Izquierda', 'Derecha', 'Depende del tráfico', 'Cualquier lado'],
         answer: 1,
-        explanation: 'En Nicaragua y países con conducción a la derecha, se entra girando a la derecha.'
+        explanation: 'En Nicaragua y países con conducción a la derecha, se entra girando a la derecha.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 15' }
     },
     {
         id: 21,
@@ -250,7 +270,8 @@ const questionBank = [
             'Cuando van a más de 60 km/h'
         ],
         answer: 1,
-        explanation: 'La prioridad es efectiva solo cuando usan señales audibles y visibles.'
+        explanation: 'La prioridad es efectiva solo cuando usan señales audibles y visibles.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 121, Pág. 15' }
     },
     {
         id: 22,
@@ -260,7 +281,8 @@ const questionBank = [
         sentence: 'La vía pública se compone de la calzada, la acera y el ________.',
         blanks: ['arcén'],
         options: ['arcén', 'techo', 'parque', 'jardín'],
-        explanation: 'El arcén (o berma) es parte integral de la estructura de la vía.'
+        explanation: 'El arcén (o berma) es parte integral de la estructura de la vía.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 3, Pág. 2' }
     },
     {
         id: 23,
@@ -274,7 +296,8 @@ const questionBank = [
             'Leve'
         ],
         answer: 2,
-        explanation: 'Conducir contra la vía es una infracción de Mayor Peligrosidad.'
+        explanation: 'Conducir contra la vía es una infracción de Mayor Peligrosidad.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 6' }
     },
     {
         id: 24,
@@ -288,7 +311,8 @@ const questionBank = [
             'No pasa nada'
         ],
         answer: 1,
-        explanation: 'La ley establece que el monto se duplica tras 24 horas sin pago en boletas rojas.'
+        explanation: 'La ley establece que el monto se duplica tras 24 horas sin pago en boletas rojas.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 129, Pág. 15' }
     },
     {
         id: 25,
@@ -297,7 +321,8 @@ const questionBank = [
         question: '¿Qué licencia se requiere para conducir un vehículo liviano (automóvil, camioneta)?',
         options: ['Categoría 1', 'Categoría 2', 'Categoría 3', 'Categoría 4'],
         answer: 2,
-        explanation: 'La Categoría 3 es la autorizada para conducir vehículos livianos de uso particular.'
+        explanation: 'La Categoría 3 es la autorizada para conducir vehículos livianos de uso particular.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 12, Pág. 7' }
     },
     {
         id: 26,
@@ -306,7 +331,8 @@ const questionBank = [
         question: 'El "Estado de Embriaguez" (no ligera ni extrema) es de:',
         options: ['0.5 a 1.0 g/l', '1.1 a 2.0 g/l', '0.1 a 0.5 g/l', 'Más de 3.0 g/l'],
         answer: 1,
-        explanation: 'El estado de embriaguez va de 1.0 (o 1.1) hasta 2.0 g/l.'
+        explanation: 'El estado de embriaguez va de 1.0 (o 1.1) hasta 2.0 g/l.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 ter, Pág. 8' }
     },
     {
         id: 27,
@@ -315,7 +341,8 @@ const questionBank = [
         question: '¿Qué indica una señal de color azul?',
         options: ['Peligro', 'Información de servicios', 'Obligación', 'Restricción'],
         answer: 1,
-        explanation: 'Las señales azules informan sobre servicios (hospitales, gasolineras, etc.).'
+        explanation: 'Las señales azules informan sobre servicios (hospitales, gasolineras, etc.).',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 9' }
     },
     {
         id: 28,
@@ -324,7 +351,8 @@ const questionBank = [
         question: '¿Participar en "carreras ilegales" es conducción temeraria?',
         options: ['No, es solo una falta administrativa', 'Sí, siempre', 'Solo si hay heridos', 'Solo si es de día'],
         answer: 1,
-        explanation: 'Las competencias de velocidad ilegales son una causa directa de conducción temeraria.'
+        explanation: 'Las competencias de velocidad ilegales son una causa directa de conducción temeraria.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 bis, Pág. 7' }
     },
     {
         id: 29,
@@ -333,7 +361,8 @@ const questionBank = [
         question: '¿Quién tiene la preferencia si un vehículo quiere entrar y otro ya está dentro de la rotonda?',
         placeholder: 'Ej: El que está...',
         answer: ['dentro', 'el que esta dentro', 'el vehiculo de adentro'],
-        explanation: 'La prioridad la tiene siempre el vehículo que circula por el anillo.'
+        explanation: 'La prioridad la tiene siempre el vehículo que circula por el anillo.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 18' }
     },
     {
         id: 30,
@@ -342,7 +371,8 @@ const questionBank = [
         question: '¿Cuál es la multa por conducir sin el cinturón de seguridad?',
         options: ['Administrativa', 'Peligrosa', 'Mayor Peligrosidad', 'Inexistente'],
         answer: 0,
-        explanation: 'No usar cinturón es una infracción de carácter Administrativo.'
+        explanation: 'No usar cinturón es una infracción de carácter Administrativo.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 31,
@@ -356,7 +386,8 @@ const questionBank = [
             'El semáforo está arruinado'
         ],
         answer: 0,
-        explanation: 'Luz roja intermitente obliga a detenerse por completo antes de continuar.'
+        explanation: 'Luz roja intermitente obliga a detenerse por completo antes de continuar.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 113, Pág. 15' }
     },
     {
         id: 32,
@@ -375,7 +406,8 @@ const questionBank = [
         sentence: 'Está prohibido circular por el arcén, excepto para ________ o emergencias.',
         blanks: ['peatones'],
         options: ['peatones', 'camiones', 'carreras', 'adelantar'],
-        explanation: 'El arcén es para peatones, ciclistas o vehículos averiados.'
+        explanation: 'El arcén es para peatones, ciclistas o vehículos averiados.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 3, Pág. 2' }
     },
     {
         id: 34,
@@ -384,7 +416,8 @@ const questionBank = [
         question: '¿Qué forma tienen las señales de PREVENCIÓN?',
         options: ['Circular', 'Octagonal', 'Rombo (Diamante)', 'Rectangular'],
         answer: 2,
-        explanation: 'La mayoría de señales preventivas tienen forma de rombo amarillo.'
+        explanation: 'La mayoría de señales preventivas tienen forma de rombo amarillo.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 9' }
     },
     {
         id: 35,
@@ -393,7 +426,8 @@ const questionBank = [
         question: '¿Qué categoría de infracción es usar el celular mientras se conduce?',
         options: ['Leve', 'Administrativa', 'Peligrosa', 'Mayor Peligrosidad'],
         answer: 2,
-        explanation: 'El uso de dispositivos de comunicación es una infracción Peligrosa.'
+        explanation: 'El uso de dispositivos de comunicación es una infracción Peligrosa.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 36,
@@ -402,7 +436,8 @@ const questionBank = [
         question: '¿Cuál es la velocidad máxima permitida en zonas escolares?',
         options: ['45 km/h', '25 km/h', '60 km/h', '15 km/h'],
         answer: 1,
-        explanation: 'En zonas escolares y hospitales, el límite máximo es de 25 km/h.'
+        explanation: 'En zonas escolares y hospitales, el límite máximo es de 25 km/h.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 bis, Pág. 7' }
     },
     {
         id: 37,
@@ -416,7 +451,8 @@ const questionBank = [
             'Cualquier cantidad'
         ],
         answer: 1,
-        explanation: 'La licencia Categoría 3 cubre vehículos livianos de hasta 9 pasajeros.'
+        explanation: 'La licencia Categoría 3 cubre vehículos livianos de hasta 9 pasajeros.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 140, Pág. 16' }
     },
     {
         id: 38,
@@ -430,7 +466,8 @@ const questionBank = [
             'Espera a que se ponga verde'
         ],
         answer: 1,
-        explanation: 'La luz amarilla avisa el cambio a rojo y ordena detenerse.'
+        explanation: 'La luz amarilla avisa el cambio a rojo y ordena detenerse.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 113, Pág. 15' }
     },
     {
         id: 39,
@@ -439,7 +476,8 @@ const questionBank = [
         question: '¿Cómo se le llama a la boleta que recibes por una infracción grave y que no permite conducir más de 24h?',
         placeholder: 'Ej: Boleta...',
         answer: ['roja', 'boleta roja'],
-        explanation: 'Es la boleta roja, usada para infracciones severas o retenciones.'
+        explanation: 'Es la boleta roja, usada para infracciones severas o retenciones.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 129, Pág. 15' }
     },
     {
         id: 40,
@@ -448,7 +486,8 @@ const questionBank = [
         question: 'Si quieres salir en la primera salida de una rotonda, ¿en qué carril debes situarte?',
         options: ['Carril izquierdo', 'Carril derecho', 'Cualquiera', 'En medio'],
         answer: 1,
-        explanation: 'Para salir pronto (derecha o recto) se usa el carril externo/derecho.'
+        explanation: 'Para salir pronto (derecha o recto) se usa el carril externo/derecho.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 15' }
     },
     {
         id: 41,
@@ -457,7 +496,8 @@ const questionBank = [
         question: '¿Qué examen mide el alcohol en el aire expirado?',
         options: ['Alcoholemia', 'Alcoholimetría', 'Examen de sangre', 'Narcotest'],
         answer: 1,
-        explanation: 'Alcoholimetría es el aire, Alcoholemia es la sangre.'
+        explanation: 'Alcoholimetría es el aire, Alcoholemia es la sangre.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 ter, Pág. 8' }
     },
     {
         id: 42,
@@ -471,13 +511,15 @@ const questionBank = [
             'Ignorar si no hay policías'
         ],
         answer: 1,
-        explanation: 'Ceda el paso no obliga a detenerse si la vía está despejada.'
+        explanation: 'Ceda el paso no obliga a detenerse si la vía está despejada.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 4' }
     },
     {
         id: 43,
         type: 'multiple-choice',
         topic: 'Vehículos de régimen preferente',
         question: '¿Pueden estos vehículos pasarse un semáforo en rojo?',
+        image: 'assets/img/questions/question_43.png',
         options: [
             'No, nunca',
             'Sí, siempre',
@@ -485,7 +527,8 @@ const questionBank = [
             'Solo si es policía'
         ],
         answer: 2,
-        explanation: 'Pueden hacerlo en emergencia, reduciendo velocidad y asegurando el paso.'
+        explanation: 'Pueden hacerlo en emergencia, reduciendo velocidad y asegurando el paso.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 121, Pág. 15' }
     },
     {
         id: 44,
@@ -495,7 +538,8 @@ const questionBank = [
         sentence: 'Aventajar en ________ o puentes es una causa de conducción temeraria.',
         blanks: ['curvas'],
         options: ['curvas', 'rectas', 'pistas', 'calles'],
-        explanation: 'Adelantar donde no hay visibilidad es sumamente peligroso.'
+        explanation: 'Adelantar donde no hay visibilidad es sumamente peligroso.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 bis, Pág. 7' }
     },
     {
         id: 45,
@@ -504,7 +548,8 @@ const questionBank = [
         question: '¿Cuál es la multa por tirar basura desde un vehículo?',
         options: ['Leve', 'Administrativa', 'Peligrosa', 'No hay multa'],
         answer: 1,
-        explanation: 'Arrojar basura a la vía pública es una infracción Administrativa.'
+        explanation: 'Arrojar basura a la vía pública es una infracción Administrativa.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 46,
@@ -513,7 +558,8 @@ const questionBank = [
         question: '¿Qué significan las señales con fondo NARANJA?',
         options: ['Turismo', 'Zona de obras o construcción', 'Peligro permanente', 'Servicios'],
         answer: 1,
-        explanation: 'El naranja indica condiciones temporales por trabajos en la vía.'
+        explanation: 'El naranja indica condiciones temporales por trabajos en la vía.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 7' }
     },
     {
         id: 47,
@@ -522,7 +568,8 @@ const questionBank = [
         question: '¿Cuál es la velocidad máxima en carreteras de circunvalación (pistas)?',
         options: ['45 km/h', '60 km/h', '80 km/h', '100 km/h'],
         answer: 1,
-        explanation: 'Usualmente en áreas urbanas principales el límite es 60 km/h.'
+        explanation: 'Usualmente en áreas urbanas principales el límite es 60 km/h.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 bis, Pág. 7' }
     },
     {
         id: 48,
@@ -531,7 +578,8 @@ const questionBank = [
         question: '¿Qué es un "Vehículo de Tracción Animal"?',
         options: ['Un tractor', 'Un carretón halado por caballos', 'Un perro con correa', 'Una bicicleta'],
         answer: 1,
-        explanation: 'Vehículos movidos por animales, comunes en zonas rurales.'
+        explanation: 'Vehículos movidos por animales, comunes en zonas rurales.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 3, Pág. 4' }
     },
     {
         id: 49,
@@ -540,7 +588,8 @@ const questionBank = [
         question: '¿Qué indica una señal circular con borde rojo y fondo blanco?',
         options: ['Advertencia', 'Prohibición o Restricción', 'Información', 'Recomendación'],
         answer: 1,
-        explanation: 'Las circulares con borde rojo son señales Reglamentarias de prohibición.'
+        explanation: 'Las circulares con borde rojo son señales Reglamentarias de prohibición.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 3' }
     },
     {
         id: 50,
@@ -549,7 +598,8 @@ const questionBank = [
         question: '¿Cómo se llama la ley principal de tránsito en Nicaragua?',
         placeholder: 'Ej: Ley...',
         answer: ['ley 431', '431'],
-        explanation: 'Es la Ley 431, Ley para el Régimen de Circulación Vehicular.'
+        explanation: 'Es la Ley 431, Ley para el Régimen de Circulación Vehicular.',
+        source: { file: 'Ley431.pdf', detail: 'Pág. 2' }
     },
     {
         id: 51,
@@ -558,7 +608,8 @@ const questionBank = [
         question: '¿Es permitido aventajar dentro de una rotonda?',
         options: ['Sí, si hay espacio', 'No, está prohibido', 'Solo a motocicletas', 'Solo de noche'],
         answer: 1,
-        explanation: 'Dentro de la rotonda se debe mantener el carril, no aventajar.'
+        explanation: 'Dentro de la rotonda se debe mantener el carril, no aventajar.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 19' }
     },
     {
         id: 52,
@@ -572,7 +623,8 @@ const questionBank = [
             'Trabajo comunitario'
         ],
         answer: 1,
-        explanation: 'La embriaguez extrema conlleva sanciones penales y administrativas severas.'
+        explanation: 'La embriaguez extrema conlleva sanciones penales y administrativas severas.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 6' }
     },
     {
         id: 53,
@@ -581,7 +633,8 @@ const questionBank = [
         question: '¿Qué infracción es conducir con la licencia vencida?',
         options: ['Administrativa', 'Peligrosa', 'Mayor Peligrosidad', 'Ninguna'],
         answer: 1,
-        explanation: 'Conducir con documento vencido es una infracción Peligrosa.'
+        explanation: 'Conducir con documento vencido es una infracción Peligrosa.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 54,
@@ -590,7 +643,8 @@ const questionBank = [
         question: '¿Qué indica una señal con una flecha en "U" tachada con una línea roja?',
         options: ['Permitido girar en U', 'Prohibido girar en U', 'Camino curvo', 'Retorno a 500m'],
         answer: 1,
-        explanation: 'La línea roja diagonal siempre indica prohibición.'
+        explanation: 'La línea roja diagonal siempre indica prohibición.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 3' }
     },
     {
         id: 55,
@@ -604,7 +658,8 @@ const questionBank = [
             'El que pita primero'
         ],
         answer: 0,
-        explanation: 'En cruces no señalizados, la prioridad es del vehículo que aparece por la derecha.'
+        explanation: 'En cruces no señalizados, la prioridad es del vehículo que aparece por la derecha.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 4' }
     },
     {
         id: 56,
@@ -613,7 +668,8 @@ const questionBank = [
         question: '¿Qué distancia mínima se debe mantener al seguir a un vehículo de emergencia?',
         options: ['10 metros', '50 metros', '100 metros', 'No hay regla'],
         answer: 1,
-        explanation: 'Se recomienda mantener al menos 50 metros para no estorbar sus maniobras.'
+        explanation: 'Se recomienda mantener al menos 50 metros para no estorbar sus maniobras.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 121, Pág. 15' }
     },
     {
         id: 57,
@@ -623,7 +679,8 @@ const questionBank = [
         sentence: 'Las flechas pintadas en el pavimento son señales ________.',
         blanks: ['horizontales'],
         options: ['horizontales', 'verticales', 'luminosas', 'sonoras'],
-        explanation: 'Toda señalización en el suelo se llama horizontal.'
+        explanation: 'Toda señalización en el suelo se llama horizontal.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 8' }
     },
     {
         id: 58,
@@ -632,7 +689,8 @@ const questionBank = [
         question: '¿Es conducción temeraria aventajar en una pendiente?',
         options: ['Sí, si es de forma indolente', 'No, es normal', 'Solo si el camión es lento', 'Solo si no hay rallas'],
         answer: 0,
-        explanation: 'Aventajar en pendientes sin visibilidad es conducción temeraria.'
+        explanation: 'Aventajar en pendientes sin visibilidad es conducción temeraria.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26 bis, Pág. 7' }
     },
     {
         id: 59,
@@ -641,7 +699,8 @@ const questionBank = [
         question: '¿Cuál es la multa por no portar el seguro obligatorio?',
         options: ['Leve', 'Administrativa', 'Peligrosa', 'Mayor Peligrosidad'],
         answer: 2,
-        explanation: 'No tener seguro es una infracción de Mayor Peligrosidad.'
+        explanation: 'No tener seguro es una infracción de Mayor Peligrosidad.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 60,
@@ -650,7 +709,8 @@ const questionBank = [
         question: '¿Qué significa un oficial de tránsito de espaldas a usted?',
         options: ['Siga', 'Alto', 'Acelere', 'Gire a la izquierda'],
         answer: 1,
-        explanation: 'El oficial de espaldas o de frente equivale a luz roja (ALTO).'
+        explanation: 'El oficial de espaldas o de frente equivale a luz roja (ALTO).',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 1' }
     },
     {
         id: 61,
@@ -659,7 +719,8 @@ const questionBank = [
         question: '¿En qué lado de la calzada se debe circular normalmente?',
         options: ['Izquierdo', 'Derecho', 'Centro', 'Cualquiera'],
         answer: 1,
-        explanation: 'En Nicaragua la circulación es por el carril derecho.'
+        explanation: 'En Nicaragua la circulación es por el carril derecho.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 110, Pág. 14' }
     },
     {
         id: 62,
@@ -673,7 +734,8 @@ const questionBank = [
             'Autobuses escolares'
         ],
         answer: 1,
-        explanation: 'Son vehículos de urgencia como ambulancias, bomberos y policía.'
+        explanation: 'Son vehículos de urgencia como ambulancias, bomberos y policía.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 3, Pág. 3' }
     },
     {
         id: 63,
@@ -682,7 +744,8 @@ const questionBank = [
         question: '¿Qué indican las señales informativas de color CAFÉ?',
         options: ['Restaurantes', 'Sitios de interés turístico o recreativo', 'Gasolineras', 'Talleres'],
         answer: 1,
-        explanation: 'El color café (marrón) es exclusivo para turismo y recreación.'
+        explanation: 'El color café (marrón) es exclusivo para turismo y recreación.',
+        source: { file: 'SeñalesdeTransito.pdf', detail: 'Pág. 4' }
     },
     {
         id: 64,
@@ -691,7 +754,8 @@ const questionBank = [
         question: '¿Cuál es la validez de la Boleta Amarilla (en días)?',
         placeholder: 'Ej: 10',
         answer: ['30', 'treinta'],
-        explanation: 'La boleta amarilla tiene una validez legal de 30 días.'
+        explanation: 'La boleta amarilla tiene una validez legal de 30 días.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 143, Pág. 17' }
     },
     {
         id: 65,
@@ -700,7 +764,8 @@ const questionBank = [
         question: '¿A quién protege primordialmente la Ley 431?',
         options: ['A los carros', 'A la vida y la integridad física de las personas', 'A los policías', 'A las carreteras'],
         answer: 1,
-        explanation: 'El fin supremo es la protección de la vida humana en la vía.'
+        explanation: 'El fin supremo es la protección de la vida humana en la vía.',
+        source: { file: 'Ley431.pdf', detail: 'Pág. 2' }
     },
     {
         id: 66,
@@ -710,7 +775,8 @@ const questionBank = [
         sentence: '1. De 0.5 a 1.0 g/l: ________. 2. De 1.1 a 2.0 g/l: ________. 3. Más de 2.0 g/l: ________.',
         blanks: ['Embriaguez Ligera', 'Estado de Embriaguez', 'Embriaguez Extrema'],
         options: ['Embriaguez Ligera', 'Estado de Embriaguez', 'Embriaguez Extrema', 'Sobriedad', 'Mareo'],
-        explanation: 'La Ley 431 define estos tres niveles específicos para determinar la gravedad de la infracción.'
+        explanation: 'La Ley 431 define estos tres niveles específicos para determinar la gravedad de la infracción.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 67,
@@ -720,7 +786,8 @@ const questionBank = [
         sentence: '1. Embriaguez Ligera: de ________ a 1.0 g/l. 2. Estado de ________: de 1.1 a 2.0 g/l. 3. Embriaguez ________: superior a 2.0 g/l.',
         blanks: ['0.5', 'Embriaguez', 'Extrema'],
         options: ['0.5', 'Embriaguez', 'Extrema', '0.2', 'Severa', 'Moderada'],
-        explanation: 'Dominar tanto los nombres como los rangos numéricos es vital para el examen teórico.'
+        explanation: 'Dominar tanto los nombres como los rangos numéricos es vital para el examen teórico.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 7' }
     },
     {
         id: 68,
@@ -734,7 +801,8 @@ const questionBank = [
             'No es necesario usarlas'
         ],
         answer: 2,
-        explanation: 'Se usan al entrar para indicar si vas a la derecha o izquierda (carril) y obligatoriamente al salir.'
+        explanation: 'Se usan al entrar para indicar si vas a la derecha o izquierda (carril) y obligatoriamente al salir.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 17' }
     },
     {
         id: 69,
@@ -748,7 +816,8 @@ const questionBank = [
             'El arcén'
         ],
         answer: 1,
-        explanation: 'Para giros a la izquierda o retornos (U), se debe usar el carril interno.'
+        explanation: 'Para giros a la izquierda o retornos (U), se debe usar el carril interno.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 14' }
     },
     {
         id: 70,
@@ -762,7 +831,8 @@ const questionBank = [
             'Girar a la izquierda bruscamente'
         ],
         answer: 2,
-        explanation: 'Nunca retroceda; simplemente de una vuelta adicional hasta llegar de nuevo a su salida.'
+        explanation: 'Nunca retroceda; simplemente de una vuelta adicional hasta llegar de nuevo a su salida.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 19' }
     },
     {
         id: 71,
@@ -776,7 +846,8 @@ const questionBank = [
             'Solo en caso de emergencia mecánica'
         ],
         answer: 2,
-        explanation: 'La rotonda es una vía de circulación continua; detenerse causa peligro y obstrucción.'
+        explanation: 'La rotonda es una vía de circulación continua; detenerse causa peligro y obstrucción.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 19' }
     },
     {
         id: 72,
@@ -790,7 +861,8 @@ const questionBank = [
             'Nadie tiene prioridad'
         ],
         answer: 1,
-        explanation: 'Al salir de cualquier vía, los peatones en el cruce peatonal tienen la prioridad.'
+        explanation: 'Al salir de cualquier vía, los peatones en el cruce peatonal tienen la prioridad.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 110, Pág. 14' }
     },
     {
         id: 73,
@@ -804,7 +876,8 @@ const questionBank = [
             '80 km/h'
         ],
         answer: 0,
-        explanation: 'Las rotondas requieren velocidades bajas para permitir maniobras seguras de entrada y salida.'
+        explanation: 'Las rotondas requieren velocidades bajas para permitir maniobras seguras de entrada y salida.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 17' }
     },
     {
         id: 74,
@@ -818,7 +891,8 @@ const questionBank = [
             'Nada en especial'
         ],
         answer: 0,
-        explanation: 'Los vehículos largos necesitan un radio de giro mayor; dales espacio suficiente.'
+        explanation: 'Los vehículos largos necesitan un radio de giro mayor; dales espacio suficiente.',
+        source: { file: 'CirculacionenIntersecciones.pdf', detail: 'Pág. 15' }
     },
     {
         id: 75,
@@ -827,7 +901,8 @@ const questionBank = [
         question: 'En una rotonda, ¿por qué lado se debe circular siempre?',
         placeholder: 'Ej: Lado...',
         answer: ['derecho', 'la derecha', 'derecha'],
-        explanation: 'En Nicaragua la circulación es siempre por la derecha en sentido antihorario.'
+        explanation: 'En Nicaragua la circulación es siempre por la derecha en sentido antihorario.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 110, Pág. 14' }
     },
     {
         id: 76,
@@ -841,7 +916,8 @@ const questionBank = [
             'Durante toda la vida del conductor'
         ],
         answer: 1,
-        explanation: 'La reincidencia se evalúa sumando las infracciones cometidas en un lapso de 12 meses.'
+        explanation: 'La reincidencia se evalúa sumando las infracciones cometidas en un lapso de 12 meses.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 24, Pág. 6' }
     },
     {
         id: 77,
@@ -855,7 +931,8 @@ const questionBank = [
             '10 infracciones'
         ],
         answer: 1,
-        explanation: 'Cometer 3 infracciones de mayor peligrosidad en un año es causal de suspensión por reincidencia.'
+        explanation: 'Cometer 3 infracciones de mayor peligrosidad en un año es causal de suspensión por reincidencia.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 24, Pág. 6' }
     },
     {
         id: 78,
@@ -869,7 +946,8 @@ const questionBank = [
             '8 infracciones'
         ],
         answer: 2,
-        explanation: 'Acumular 6 infracciones calificadas como Peligrosas en un año conlleva la suspensión de la licencia.'
+        explanation: 'Acumular 6 infracciones calificadas como Peligrosas en un año conlleva la suspensión de la licencia.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 24, Pág. 6' }
     },
     {
         id: 79,
@@ -879,7 +957,8 @@ const questionBank = [
         sentence: '1ra vez: ________ meses. 2da vez: ________ meses. 4ta vez: Cancelación ________.',
         blanks: ['3', '6', 'Definitiva'],
         options: ['3', '6', 'Definitiva', '1', '12', 'Temporal'],
-        explanation: 'La ley aplica sanciones progresivas: 3 meses, 6 meses, 1 año y finalmente la cancelación definitiva.'
+        explanation: 'La ley aplica sanciones progresivas: 3 meses, 6 meses, 1 año y finalmente la cancelación definitiva.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 24, Pág. 6' }
     },
     {
         id: 80,
@@ -893,7 +972,8 @@ const questionBank = [
             'No hay requisitos adicionales'
         ],
         answer: 1,
-        explanation: 'La ley obliga a realizar un curso de reeducación vial antes de recuperar la licencia suspendida.'
+        explanation: 'La ley obliga a realizar un curso de reeducación vial antes de recuperar la licencia suspendida.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 24, Pág. 6' }
     },
     {
         id: 81,
@@ -903,7 +983,8 @@ const questionBank = [
         sentence: 'Cuando un conductor es multado en un periodo de ________ por cometer ________ infracciones de mayor peligrosidad o ________ peligrosas.',
         blanks: ['un año', 'tres', 'seis'],
         options: ['un año', 'tres', 'seis', 'un mes', 'cinco', 'diez'],
-        explanation: 'La reincidencia se hace efectiva al alcanzar estos límites numéricos dentro del mismo año calendario.'
+        explanation: 'La reincidencia se hace efectiva al alcanzar estos límites numéricos dentro del mismo año calendario.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 24, Pág. 6' }
     },
     {
         id: 82,
@@ -917,6 +998,7 @@ const questionBank = [
             'Penales y Civiles'
         ],
         answer: 1,
-        explanation: 'La Ley 431 utiliza específicamente estas tres categorías: Mayor Peligrosidad, Peligrosas y Administrativas.'
+        explanation: 'La Ley 431 utiliza específicamente estas tres categorías: Mayor Peligrosidad, Peligrosas y Administrativas.',
+        source: { file: 'Ley431.pdf', detail: 'Art. 26, Pág. 6' }
     }
 ];

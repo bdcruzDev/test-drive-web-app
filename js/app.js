@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         screen: 'menu',
         currentQuestionIndex: 0,
         score: 0,
-        lives: 3,
+        mistakes: 0,
         selectedOption: null,
         userAnswer: '',
         userBlanks: [],
@@ -48,11 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ui = {
         progressBar: document.getElementById('progress-bar'),
-        livesCount: document.getElementById('lives-count'),
+        questionCounter: document.getElementById('question-counter'),
+        mistakesCount: document.getElementById('mistakes-count'),
         questionContainer: document.getElementById('question-container'),
         feedbackContainer: document.getElementById('feedback-message'),
         feedbackTitle: document.getElementById('feedback-title'),
         feedbackDesc: document.getElementById('feedback-desc'),
+        feedbackSource: document.getElementById('feedback-source'),
         finalScore: document.getElementById('final-score'),
         accuracy: document.getElementById('accuracy'),
         actionContainer: document.getElementById('action-container'),
@@ -89,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         currentState.currentQuestionIndex = 0;
         currentState.score = 0;
-        currentState.lives = 3;
+        currentState.mistakes = 0;
         currentState.isAnswerChecked = false;
         updateUI();
         renderQuestion();
@@ -99,7 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateUI() {
         const progress = (currentState.currentQuestionIndex / sessionQuestions.length) * 100;
         ui.progressBar.style.width = `${progress}%`;
-        ui.livesCount.textContent = currentState.lives;
+        ui.questionCounter.textContent = `${currentState.currentQuestionIndex + 1} de ${sessionQuestions.length}`;
+        ui.mistakesCount.textContent = currentState.mistakes;
         
         // Check button state
         const question = sessionQuestions[currentState.currentQuestionIndex];
@@ -139,6 +142,17 @@ document.addEventListener('DOMContentLoaded', () => {
         title.className = 'question-title';
         title.textContent = question.question;
         ui.questionContainer.appendChild(title);
+
+        if (question.image) {
+            const imgContainer = document.createElement('div');
+            imgContainer.className = 'question-image-container';
+            const img = document.createElement('img');
+            img.src = question.image;
+            img.alt = 'Imagen de la pregunta';
+            img.className = 'question-image';
+            imgContainer.appendChild(img);
+            ui.questionContainer.appendChild(imgContainer);
+        }
 
         if (question.type === 'multiple-choice') {
             renderMultipleChoice(question);
@@ -280,29 +294,40 @@ document.addEventListener('DOMContentLoaded', () => {
             ui.feedbackContainer.className = 'feedback-container correct';
             ui.feedbackTitle.textContent = '¡Excelente!';
             ui.feedbackDesc.textContent = question.explanation;
+            
+            if (question.source) {
+                ui.feedbackSource.innerHTML = `<strong>Fuente:</strong> ${question.source.file} (${question.source.detail})`;
+                ui.feedbackSource.classList.remove('hidden');
+            } else {
+                ui.feedbackSource.classList.add('hidden');
+            }
+
             playSound('correct');
         } else {
-            currentState.lives--;
+            currentState.mistakes++;
             ui.feedbackContainer.className = 'feedback-container wrong';
             ui.feedbackTitle.textContent = 'Incorrecto';
             ui.feedbackDesc.textContent = question.explanation;
             
+            if (question.source) {
+                ui.feedbackSource.innerHTML = `<strong>Fuente:</strong> ${question.source.file} (${question.source.detail})`;
+                ui.feedbackSource.classList.remove('hidden');
+            } else {
+                ui.feedbackSource.classList.add('hidden');
+            }
+
             // Add shake effect
             ui.questionContainer.classList.add('shake');
             setTimeout(() => ui.questionContainer.classList.remove('shake'), 500);
             
             playSound('wrong');
-            
-            if (currentState.lives <= 0) {
-                // Game Over logic could go here, but for now we continue to results at the end
-            }
         }
 
         updateUI();
     }
 
     function nextQuestion() {
-        if (currentState.lives <= 0 || currentState.currentQuestionIndex >= sessionQuestions.length - 1) {
+        if (currentState.currentQuestionIndex >= sessionQuestions.length - 1) {
             finishQuiz();
         } else {
             currentState.currentQuestionIndex++;
